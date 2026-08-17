@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ArrowUpRight } from "lucide-react"
 
@@ -139,21 +140,43 @@ export default function ProjectsPage() {
                     <div className="w-[34px]" />
                   </div>
 
-                  {/* Mockup */}
+                  {/* ================================== */}
+                  {/* MINIATURE DU PROJET */}
+                  {/* ================================== */}
+
                   <div className="relative flex aspect-[16/8.3] items-center justify-center overflow-hidden">
-                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(110,168,254,0.06),transparent_60%)]" />
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={`Aperçu du projet ${project.title}`}
+                        fill
+                        priority={index === 0}
+                        sizes="(max-width: 1024px) 100vw, 55vw"
+                        className="
+                          object-cover
+                          object-top
+                          transition-transform
+                          duration-700
+                          group-hover:scale-[1.02]
+                        "
+                      />
+                    ) : (
+                      <>
+                        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(110,168,254,0.06),transparent_60%)]" />
 
-                    <div className="relative px-5 text-center">
-                      <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-[#566477] sm:text-[10px]">
-                        {project.category}
-                      </p>
+                        <div className="relative px-5 text-center">
+                          <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-[#566477] sm:text-[10px]">
+                            {project.category}
+                          </p>
 
-                      <h2 className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
-                        {project.title}
-                      </h2>
+                          <h2 className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-5xl">
+                            {project.title}
+                          </h2>
 
-                      <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-[#6EA8FE] to-[#9B8AFB]" />
-                    </div>
+                          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-[#6EA8FE] to-[#9B8AFB]" />
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
 

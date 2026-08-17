@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, ArrowUpRight } from "lucide-react"
 
@@ -100,19 +101,38 @@ export function FeaturedProjects() {
 
                   {/* Aperçu */}
                   <div className="relative flex aspect-[16/8.3] items-center justify-center overflow-hidden">
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.018)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.018)_1px,transparent_1px)] bg-[size:32px_32px]" />
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={`Aperçu du projet ${project.title}`}
+                        fill
+                        priority={index === 0}
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="
+                          object-cover
+                          object-top
+                          transition-transform
+                          duration-700
+                          group-hover:scale-[1.02]
+                        "
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.018)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.018)_1px,transparent_1px)] bg-[size:32px_32px]" />
 
-                    <div className="relative px-6 text-center">
-                      <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.18em] text-[#566477] sm:text-[10px]">
-                        {project.category}
-                      </p>
+                        <div className="relative px-6 text-center">
+                          <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.18em] text-[#566477] sm:text-[10px]">
+                            {project.category}
+                          </p>
 
-                      <p className="text-2xl font-semibold tracking-[-0.04em] text-white sm:text-3xl lg:text-4xl">
-                        {project.title}
-                      </p>
+                          <p className="text-2xl font-semibold tracking-[-0.04em] text-white sm:text-3xl lg:text-4xl">
+                            {project.title}
+                          </p>
 
-                      <div className="mx-auto mt-4 h-px w-14 bg-gradient-to-r from-[#6EA8FE] to-[#9B8AFB]" />
-                    </div>
+                          <div className="mx-auto mt-4 h-px w-14 bg-gradient-to-r from-[#6EA8FE] to-[#9B8AFB]" />
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
 
