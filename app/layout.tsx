@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+
 import "./globals.css"
-import { SiteHeader } from "@/components/site-header"
+
 import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,12 +17,78 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  applicationName: "Absley.dev",
+
   title: {
-    default: "Absley.dev — Développeur web",
+    default: "Absley.dev — Développeur web & applicatif",
     template: "%s | Absley.dev",
   },
+
   description:
-    "Portfolio de développeur web spécialisé dans la création de sites, applications web et produits numériques modernes.",
+    "Portfolio d’Abdoul-aziz Dramé, développeur web & applicatif. Création de sites vitrines, back-offices, e-commerce, SaaS et applications mobiles modernes.",
+
+  keywords: [
+    "Abdoul-aziz Dramé",
+    "Absley.dev",
+    "développeur web",
+    "développeur applicatif",
+    "développeur Next.js",
+    "développeur TypeScript",
+    "création site web",
+    "site vitrine",
+    "application web",
+    "back-office",
+    "e-commerce",
+    "SaaS",
+    "application mobile",
+    "React Native",
+    "Next.js",
+    "TypeScript",
+  ],
+
+  authors: [
+    {
+      name: "Abdoul-aziz Dramé",
+    },
+  ],
+
+  creator: "Abdoul-aziz Dramé",
+  publisher: "Absley.dev",
+
+  category: "technology",
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Absley.dev",
+
+    title: "Absley.dev — Développeur web & applicatif",
+
+    description:
+      "Portfolio d’Abdoul-aziz Dramé. Sites vitrines, applications web, back-offices, e-commerce, SaaS et applications mobiles.",
+  },
+
+  twitter: {
+    card: "summary",
+
+    title: "Absley.dev — Développeur web & applicatif",
+
+    description:
+      "Portfolio d’Abdoul-aziz Dramé. Développement de produits web et mobiles modernes.",
+  },
 }
 
 export default function RootLayout({
@@ -38,7 +106,6 @@ export default function RootLayout({
         {children}
 
         <SiteFooter />
-        
       </body>
     </html>
   )

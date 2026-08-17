@@ -4,17 +4,17 @@ import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 const socials = [
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/absleydev/",
     icon: FaInstagram,
   },
   {
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/in/abdoul-aziz-ba1404180/",
     icon: FaLinkedinIn,
   },
   {
     label: "GitHub",
-    href: "#",
+    href: "https://github.com/aiiioo93",
     icon: FaGithub,
   },
 ]
@@ -40,6 +40,8 @@ export function SiteFooter() {
               <Link
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
                 className="
                   flex
