@@ -84,11 +84,19 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="hidden lg:block">
-            <Button asChild>
-              <Link href="/contact">Me contacter</Link>
-            </Button>
-          </div>
+        <div className="hidden lg:block">
+        <Button
+            asChild
+            variant="outline"
+            className="group relative h-10 overflow-hidden rounded-xl border-[#6EA8FE]/25 bg-[#6EA8FE]/[0.04] px-4 text-white transition-all duration-300 hover:border-[#6EA8FE]/50 hover:bg-[#6EA8FE]/10"
+        >
+            <Link href="/contact">
+            <span className="font-mono text-[12px]">
+                CONTACT()
+            </span>
+            </Link>
+        </Button>
+        </div>
 
           <button
             type="button"
