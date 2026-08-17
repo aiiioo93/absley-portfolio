@@ -1,3 +1,4 @@
+import { AboutPreview } from "@/components/home/about-preview"
 import { FeaturedProjects } from "@/components/home/featured-projects"
 import { Hero } from "@/components/home/hero"
 import { ServicesPreview } from "@/components/home/services-preview"
@@ -10,6 +11,7 @@ export default function Home() {
       <FeaturedProjects />
       <ServicesPreview />
       <StackPreview />
+      <AboutPreview />
     </main>
   )
 }
