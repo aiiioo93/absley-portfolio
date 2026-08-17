@@ -38,7 +38,7 @@ export function ServicesPreview() {
 
         {/* Services */}
         <div className="grid overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.015] lg:grid-cols-3">
-          {services.map((service, index) => {
+          {services.slice(0, 3).map((service, index) =>{
             const Icon = service.icon
 
             return (
