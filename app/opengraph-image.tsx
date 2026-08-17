@@ -67,14 +67,13 @@ export default function OpenGraphImage() {
         />
 
         <div
-          style={{
+        style={{
             position: "relative",
-            zIndex: 10,
             width: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-          }}
+        }}
         >
           {/* Haut */}
           <div

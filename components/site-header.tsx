@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 
 const navigation = [
   { name: "Accueil", href: "/" },
@@ -84,19 +84,35 @@ export function SiteHeader() {
             })}
           </nav>
 
-        <div className="hidden lg:block">
-        <Button
-            asChild
-            variant="outline"
-            className="group relative h-10 overflow-hidden rounded-xl border-[#6EA8FE]/25 bg-[#6EA8FE]/[0.04] px-4 text-white transition-all duration-300 hover:border-[#6EA8FE]/50 hover:bg-[#6EA8FE]/10"
-        >
-            <Link href="/contact">
-            <span className="font-mono text-[12px]">
-                CONTACT()
-            </span>
-            </Link>
-        </Button>
-        </div>
+<div className="hidden lg:block">
+  <Link
+    href="/contact"
+    className="
+      group
+      relative
+      inline-flex
+      h-10
+      items-center
+      justify-center
+      overflow-hidden
+      rounded-xl
+      border
+      border-[#6EA8FE]/25
+      bg-[#6EA8FE]/[0.04]
+      px-4
+      text-white
+      transition-all
+      duration-300
+
+      hover:border-[#6EA8FE]/50
+      hover:bg-[#6EA8FE]/10
+    "
+  >
+    <span className="font-mono text-[12px]">
+      CONTACT()
+    </span>
+  </Link>
+</div>
 
           <button
             type="button"
@@ -177,6 +193,7 @@ export function SiteHeader() {
             }`}
           >
             <span className="mr-2 text-[#6EA8FE]">+</span>
+
             <span className="text-[#8A98AA]">
               mounting application routes
             </span>
@@ -284,18 +301,21 @@ export function SiteHeader() {
                 : "translate-y-2 opacity-0"
             }`}
           >
-            <Button
-              asChild
-              className="group relative w-full overflow-hidden"
+            <Link
+              href="/contact"
+              onClick={closeMenu}
+              className={buttonVariants({
+                className: "group relative w-full overflow-hidden",
+              })}
             >
-              <Link href="/contact" onClick={closeMenu}>
-                <span className="relative z-10">Démarrer un projet</span>
+              <span className="relative z-10">
+                Démarrer un projet
+              </span>
 
-                <span className="relative z-10 ml-2 font-mono transition-transform duration-300 group-hover:translate-x-1">
-                  -&gt;
-                </span>
-              </Link>
-            </Button>
+              <span className="relative z-10 ml-2 font-mono transition-transform duration-300 group-hover:translate-x-1">
+                -&gt;
+              </span>
+            </Link>
           </div>
         </nav>
 

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowRight, Code2 } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 
 export function Hero() {
   return (
@@ -92,90 +92,90 @@ export function Hero() {
 
           {/* Groupe 3 : boutons */}
           <div className="grid grid-cols-2 gap-2.5 sm:flex sm:gap-3 lg:mt-9">
-            <Button
-              asChild
-              size="lg"
-              className="
-                group
-                relative
-                h-11
-                overflow-hidden
-                rounded-xl
-                border
-                border-[#6EA8FE]/40
-                bg-[#6EA8FE]/10
-                px-3
-                text-white
-                shadow-[0_0_0_rgba(110,168,254,0)]
-                transition-all
-                duration-300
+            <Link
+              href="/projets"
+              className={buttonVariants({
+                size: "lg",
+                className: `
+                  group
+                  relative
+                  h-11
+                  overflow-hidden
+                  rounded-xl
+                  border
+                  border-[#6EA8FE]/40
+                  bg-[#6EA8FE]/10
+                  px-3
+                  text-white
+                  shadow-[0_0_0_rgba(110,168,254,0)]
+                  transition-all
+                  duration-300
 
-                hover:border-[#6EA8FE]/70
-                hover:bg-[#6EA8FE]/15
-                hover:shadow-[0_0_30px_rgba(110,168,254,0.15)]
+                  hover:border-[#6EA8FE]/70
+                  hover:bg-[#6EA8FE]/15
+                  hover:shadow-[0_0_30px_rgba(110,168,254,0.15)]
 
-                min-[390px]:px-4
+                  min-[390px]:px-4
 
-                sm:h-12
-                sm:px-5
-              "
+                  sm:h-12
+                  sm:px-5
+                `,
+              })}
             >
-              <Link href="/projets">
-                <span className="absolute inset-0 translate-x-[-110%] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent transition-transform duration-700 group-hover:translate-x-[110%]" />
+              <span className="absolute inset-0 translate-x-[-110%] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent transition-transform duration-700 group-hover:translate-x-[110%]" />
 
-                <span className="relative flex items-center gap-2 min-[390px]:gap-3">
-                  <span className="font-mono text-[10px] text-[#6EA8FE] min-[390px]:text-[11px]">
-                    01.
-                  </span>
-
-                  <span className="text-xs min-[390px]:text-sm sm:hidden">
-                    Mes projets
-                  </span>
-
-                  <span className="hidden sm:inline">
-                    Voir mes projets
-                  </span>
-
-                  <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1 min-[390px]:size-4" />
+              <span className="relative flex items-center gap-2 min-[390px]:gap-3">
+                <span className="font-mono text-[10px] text-[#6EA8FE] min-[390px]:text-[11px]">
+                  01.
                 </span>
-              </Link>
-            </Button>
 
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="
-                group
-                h-11
-                rounded-xl
-                border-white/10
-                bg-white/[0.02]
-                px-3
-                text-[#C6D0DD]
-                transition-all
-                duration-300
+                <span className="text-xs min-[390px]:text-sm sm:hidden">
+                  Mes projets
+                </span>
 
-                hover:border-[#9B8AFB]/40
-                hover:bg-[#9B8AFB]/[0.06]
-                hover:text-white
+                <span className="hidden sm:inline">
+                  Voir mes projets
+                </span>
 
-                min-[390px]:px-4
+                <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-1 min-[390px]:size-4" />
+              </span>
+            </Link>
 
-                sm:h-12
-                sm:px-5
-              "
+            <Link
+              href="/contact"
+              className={buttonVariants({
+                size: "lg",
+                variant: "outline",
+                className: `
+                  group
+                  h-11
+                  rounded-xl
+                  border-white/10
+                  bg-white/[0.02]
+                  px-3
+                  text-[#C6D0DD]
+                  transition-all
+                  duration-300
+
+                  hover:border-[#9B8AFB]/40
+                  hover:bg-[#9B8AFB]/[0.06]
+                  hover:text-white
+
+                  min-[390px]:px-4
+
+                  sm:h-12
+                  sm:px-5
+                `,
+              })}
             >
-              <Link href="/contact">
-                <span className="font-mono text-[#9B8AFB]">
-                  ❯
-                </span>
+              <span className="font-mono text-[#9B8AFB]">
+                ❯
+              </span>
 
-                <span className="text-[11px] min-[390px]:text-sm">
-                  Démarrer un projet
-                </span>
-              </Link>
-            </Button>
+              <span className="text-[11px] min-[390px]:text-sm">
+                Démarrer un projet
+              </span>
+            </Link>
           </div>
 
           {/* Groupe 4 : technologies */}
