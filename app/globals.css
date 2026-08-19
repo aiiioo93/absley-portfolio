@@ -181,11 +181,3 @@ body {
   animation: developer-scan 1.1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-
-html {
-  scroll-padding-top: 7rem;
-}
-
-section[id] {
-  scroll-margin-top: 7rem;
-}

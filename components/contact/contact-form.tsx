@@ -103,8 +103,8 @@ export function ContactForm() {
         </h2>
 
         <p className="mt-4 max-w-md text-sm leading-7 text-[#8A98AA]">
-          Merci pour ta demande. J’ai bien reçu les informations concernant ton
-          projet et je pourrai revenir vers toi dès que possible.
+          Merci pour votre demande. J’ai bien reçu les informations concernant votre
+          projet, je pourrai revenir vers vous dès que possible.
         </p>
 
         <button
@@ -370,7 +370,7 @@ export function ContactForm() {
       <div className="mt-7 flex flex-col gap-4 border-t border-white/[0.07] pt-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-sm text-xs leading-5 text-[#566477]">
           Les informations envoyées servent uniquement à comprendre et traiter
-          ta demande.
+          votre demande.
         </p>
 
         <button

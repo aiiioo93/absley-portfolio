@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
@@ -13,6 +14,24 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "À propos", href: "/a-propos" },
   { name: "Stack", href: "/stack" },
+]
+
+const socials = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/absleydev/",
+    icon: FaInstagram,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/abdoul-aziz-ba1404180/",
+    icon: FaLinkedinIn,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/aiiioo93",
+    icon: FaGithub,
+  },
 ]
 
 export function SiteHeader() {
@@ -61,7 +80,7 @@ export function SiteHeader() {
           >
             <span className="text-[#6EA8FE]">&lt;</span>
             absley.dev
-            <span className="text-[#6EA8FE]"> /&gt;</span>
+            <span className="text-[#6EA8FE]">/&gt;</span>
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -97,19 +116,27 @@ export function SiteHeader() {
       overflow-hidden
       rounded-xl
       border
-      border-[#6EA8FE]/25
-      bg-[#6EA8FE]/[0.04]
+      border-[#6EA8FE]/30
+      bg-[#6EA8FE]/[0.05]
       px-4
       text-white
+      shadow-[0_0_0_rgba(110,168,254,0)]
       transition-all
       duration-300
 
-      hover:border-[#6EA8FE]/50
+      hover:border-[#6EA8FE]/60
       hover:bg-[#6EA8FE]/10
+      hover:shadow-[0_0_25px_rgba(110,168,254,0.14)]
     "
   >
-    <span className="font-mono text-[12px]">
-      CONTACT()
+    <span className="absolute inset-0 -translate-x-[120%] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent transition-transform duration-700 group-hover:translate-x-[120%]" />
+
+    <span className="relative flex items-center gap-2.5">
+      <span className="size-1.5 rounded-full bg-[#6EA8FE] shadow-[0_0_8px_#6EA8FE] transition-all duration-300 group-hover:bg-[#9B8AFB] group-hover:shadow-[0_0_10px_#9B8AFB]" />
+
+      <span className="font-mono text-[11px] tracking-[0.04em]">
+        CONTACT()
+      </span>
     </span>
   </Link>
 </div>
@@ -305,14 +332,46 @@ export function SiteHeader() {
               href="/contact"
               onClick={closeMenu}
               className={buttonVariants({
-                className: "group relative w-full overflow-hidden",
+                className: `
+                  group
+                  relative
+                  h-12
+                  w-full
+                  justify-start
+                  overflow-hidden
+                  rounded-xl
+                  border
+                  border-[#6EA8FE]/35
+                  bg-[#6EA8FE]/[0.07]
+                  px-3
+                  text-white
+                  shadow-[0_0_28px_rgba(110,168,254,0.08)]
+                  transition-all
+                  duration-300
+
+                  hover:border-[#6EA8FE]/60
+                  hover:bg-[#6EA8FE]/[0.12]
+                  hover:shadow-[0_0_34px_rgba(110,168,254,0.16)]
+                `,
               })}
             >
-              <span className="relative z-10">
-                Démarrer un projet
+              <span className="absolute inset-0 -translate-x-[120%] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent transition-transform duration-700 group-hover:translate-x-[120%]" />
+
+              <span className="relative z-10 flex size-8 shrink-0 items-center justify-center rounded-lg border border-[#6EA8FE]/25 bg-[#6EA8FE]/10 font-mono text-sm text-[#6EA8FE] shadow-[0_0_14px_rgba(110,168,254,0.10)]">
+                ❯
               </span>
 
-              <span className="relative z-10 ml-2 font-mono transition-transform duration-300 group-hover:translate-x-1">
+              <span className="relative z-10 ml-3 flex min-w-0 flex-1 flex-col items-start text-left leading-none">
+                <span className="text-[13px] font-medium text-white">
+                  Démarrer un projet
+                </span>
+
+                <span className="mt-1 font-mono text-[8px] uppercase tracking-[0.15em] text-[#6EA8FE]/70">
+                  contact.init()
+                </span>
+              </span>
+
+              <span className="relative z-10 ml-2 font-mono text-sm text-[#6EA8FE] transition-transform duration-300 group-hover:translate-x-1">
                 -&gt;
               </span>
             </Link>
@@ -320,7 +379,7 @@ export function SiteHeader() {
         </nav>
 
         {/* Footer system */}
-        <div className="relative border-t border-white/10 px-6 py-4">
+        <div className="relative border-t border-white/10 px-6 py-3">
           <div className="flex items-center justify-between font-mono text-[10px]">
             <div className="flex items-center gap-2 text-[#728096]">
               <span className="relative flex size-2">
@@ -334,6 +393,31 @@ export function SiteHeader() {
             <span className="text-[#48576A]">
               ESC / CLOSE
             </span>
+          </div>
+
+          <div className="mt-2 flex items-center justify-between border-t border-white/[0.06] pt-2">
+            <span className="font-mono text-[8px] uppercase tracking-[0.15em] text-[#48576A]">
+              social.links
+            </span>
+
+            <div className="flex items-center gap-2">
+              {socials.map((social) => {
+                const Icon = social.icon
+
+                return (
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="flex size-8 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.02] text-[#566477] transition-all duration-300 hover:border-[#6EA8FE]/35 hover:bg-[#6EA8FE]/[0.07] hover:text-white"
+                  >
+                    <Icon className="size-3.5" />
+                  </Link>
+                )
+              })}
+            </div>
           </div>
         </div>
       </aside>
