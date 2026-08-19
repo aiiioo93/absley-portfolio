@@ -144,7 +144,7 @@ export function ContactForm() {
         </p>
 
         <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white">
-          Parle-moi de ton projet.
+          Parlez-moi de votre projet.
         </h2>
       </div>
 
@@ -161,7 +161,7 @@ export function ContactForm() {
           <input
             id="name"
             type="text"
-            placeholder="Ton nom"
+            placeholder="Votre Nom complet"
             {...register("name")}
             className="
               h-12
@@ -201,7 +201,7 @@ export function ContactForm() {
           <input
             id="email"
             type="email"
-            placeholder="ton@email.com"
+            placeholder="votre@email.com"
             {...register("email")}
             className="
               h-12
@@ -320,13 +320,13 @@ export function ContactForm() {
           htmlFor="message"
           className="mb-2 block font-mono text-[9px] uppercase tracking-[0.14em] text-[#728096]"
         >
-          Ton projet *
+          Votre projet *
         </label>
 
         <textarea
           id="message"
           rows={7}
-          placeholder="Explique-moi ton idée, ton besoin ou ce que tu souhaites mettre en place..."
+          placeholder="Expliquez-moi votre idée, votre besoin ou ce que vous souhaitez mettre en place..."
           {...register("message")}
           className="
             w-full

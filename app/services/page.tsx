@@ -307,8 +307,8 @@ export default function ServicesPage() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-xl text-[15px] leading-7 text-[#8A98AA]">
-                Présente-moi ton besoin et voyons ensemble quelle solution
-                correspond le mieux à ton projet.
+                Présentez-moi votre besoin et voyons ensemble quelle solution
+                correspond le mieux à votre projet.
               </p>
 
               <div className="mt-8 flex justify-center">

@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Vous avez un projet web ou mobile ? Contactez Abdoul-aziz Dramé pour échanger autour de votre besoin et de la solution à construire.",
+
+  alternates: {
+  canonical: "/contact",
+},
 }
 
 export default function ContactLayout({

@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     slug: "atelier-noma",
     title: "Atelier Noma",
-    category: "Site vitrine",
+    category: "Projet concept · Site vitrine",
     image: "/projects/atelier-noma.webp",
     description:
       "Une expérience web moderne pensée pour présenter une activité avec clarté, élégance et efficacité sur tous les écrans.",

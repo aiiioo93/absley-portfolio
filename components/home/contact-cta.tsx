@@ -56,8 +56,8 @@ export function ContactCta() {
 
             {/* Description */}
             <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-7 text-[#8A98AA] sm:text-base sm:leading-8">
-              Site web, application ou produit numérique : parlons de ton
-              projet, de ton besoin et de la meilleure manière de le
+              Site web, application ou produit numérique : parlons de votre
+              projet, de votre besoin et de la meilleure manière de le
               concrétiser.
             </p>
 

@@ -17,6 +17,12 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://absley.dev"),
+
+  alternates: {
+    canonical: "/",
+  },
+
   applicationName: "Absley.dev",
 
   title: {
@@ -91,6 +97,19 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Abdoul-aziz Dramé",
+  url: "https://absley.dev",
+  jobTitle: "Développeur web & applicatif",
+  sameAs: [
+    "https://github.com/aiiioo93",
+    "https://www.linkedin.com/in/abdoul-aziz-ba1404180/",
+    "https://www.instagram.com/absleydev/",
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -101,6 +120,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#070B14] font-sans text-[#F4F7FB] antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+
         <SiteHeader />
 
         {children}

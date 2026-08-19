@@ -4,7 +4,7 @@ export const contactSchema = z.object({
   name: z
     .string()
     .trim()
-    .min(2, "Indique ton nom.")
+    .min(2, "Indiquez votre nom.")
     .max(80, "Le nom est trop long."),
 
   email: z
@@ -15,7 +15,7 @@ export const contactSchema = z.object({
 
   projectType: z
     .string()
-    .min(1, "Choisis un type de projet."),
+    .min(1, "Choisissez un type de projet."),
 
   budget: z.string().optional(),
 
@@ -24,7 +24,7 @@ export const contactSchema = z.object({
     .trim()
     .min(
       20,
-      "Donne-moi quelques informations supplémentaires sur ton projet."
+      "Donnez-moi quelques informations supplémentaires sur votre projet."
     )
     .max(5000, "Le message est trop long."),
 

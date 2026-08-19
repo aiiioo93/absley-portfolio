@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: "Projets",
   description:
     "Découvrez les projets réalisés par Abdoul-aziz Dramé : sites web, applications et produits numériques construits avec une stack moderne et évolutive.",
+   
+  alternates: {
+    canonical: "/projets",
+  },
 }
 
 export default function ProjectsLayout({
