@@ -24,7 +24,6 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     year: "2026",
     featured: true,
-    
 
     website: "https://atelier-noma-eight.vercel.app",
 
@@ -39,16 +38,44 @@ export const projects: Project[] = [
     ],
   },
 
-//   {
-//     slug: "horizon-voyages",
-//     title: "Horizon Voyages",
-//     category: "Site vitrine",
-//     description:
-//       "Un site de voyage immersif conçu autour d’une navigation simple, d’une identité visuelle forte et d’une expérience responsive.",
-//     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-//     year: "2026",
-//     featured: true,
-//   },
+  {
+    slug: "dramstars",
+    title: "LADRAMSTARS",
+    category: "Portfolio photographique",
+    image: "/projects/dramstars.webp",
+    description:
+      "Un portfolio photographique immersif conçu comme une archive numérique autour d’un travail autobiographique, de la banlieue et des territoires traversés.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    year: "2026",
+    featured: true,
+
+    website: "https://dramstars.vercel.app/",
+
+    overview:
+      "LADRAMSTARS est un portfolio photographique pensé comme une archive éditoriale et immersive. Le projet met en valeur le travail de Madou à travers son parcours personnel et plusieurs séries photographiques, avec une direction artistique inspirée de l’univers argentique et des archives 35 mm.",
+
+    highlights: [
+      "Portfolio photographique immersif",
+      "Trois séries photographiques distinctes",
+      "Galeries dédiées aux différentes archives",
+      "Consultation individuelle des photographies",
+      "Présentation du parcours du photographe",
+      "Navigation éditoriale entre les séries",
+      "Expérience responsive",
+      "Direction artistique inspirée des archives 35 mm",
+    ],
+  },
+
+  // {
+  //   slug: "horizon-voyages",
+  //   title: "Horizon Voyages",
+  //   category: "Site vitrine",
+  //   description:
+  //     "Un site de voyage immersif conçu autour d’une navigation simple, d’une identité visuelle forte et d’une expérience responsive.",
+  //   stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+  //   year: "2026",
+  //   featured: true,
+  // },
 ]
 
 export const featuredProjects = projects.filter(
